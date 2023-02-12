@@ -1,0 +1,41 @@
+.welcomeContainer {
+    display: flex;
+    align-items: center;
+    padding: 6rem 0;
+}
+
+.image {
+    display: none;
+    width: 124px;
+    height: 124px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: var(--foregroundDarker);
+}
+
+.welcomeContainer h1 {
+    font-size: 1.25rem;
+    line-height: 34px;
+}
+
+.welcomeContainer h1 a {
+    font-weight: 600;
+}
+
+.welcomeContainer h1 a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+    .welcomeContainer {
+        padding: 10rem 0;
+    }
+
+    .image {
+        display: block;
+    }
+
+    .welcomeContainer h1 {
+        padding: 1.25rem;
+    }
+}

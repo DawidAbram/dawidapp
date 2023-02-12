@@ -1,0 +1,65 @@
+---
+title: A simple blog post example
+publishedAt: 01/02/2023
+imageUrl: /images/landscape.jpg
+---
+
+import BlogPostLayout from '@/components/BlogPostLayout';
+import BlogPostImage from '../../../public/images/landscape.jpg';
+
+export default ({ title, publishedAt, children }) => <BlogPostLayout
+    title="A simple blog post example"
+    description="A simple blog post example with some images and embedded code example"
+    publishedAt="01/02/2023"
+    keywords="NextJs, reactjs, open source, blog"
+    imageUrl={BlogPostImage}
+>{children}</BlogPostLayout>;
+
+This is a paragraph of text with some [**link to a portfolio**](https://dawid.app)
+
+
+## A h2 title
+
+### h3 title
+
+An ordered list example:
+
+1. It is cool to use
+2. It is simple to learn
+3. It has an extensive community
+4. And more and more
+
+An unordered list example:
+
+- It is cool to use
+- It is simple to learn
+- It has an extensive community
+- And more and more
+
+<img src="/images/landscape.jpg" alt="Landscape" />
+
+An example of some embedded code:
+
+```js
+import Document, {Html, Head, Main, NextScript} from 'next/document';
+
+// 🔥 Super granular and accurate highlighting
+export default class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return {...initialProps};
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head />
+        <body className="bg-zinc-800 text-zinc-200">
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+```
