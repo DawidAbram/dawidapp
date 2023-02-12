@@ -24,10 +24,10 @@ export default function About() {
                                 Hi I’m Dawid! 👋
                             </p>
                             <p>
-                                I'm a full stack website developer based out of United Kingdom,
+                                I&apos;m a full stack website developer based out of United Kingdom,
                                 currently working at <a href="https://th-ey.com" target="_blank" rel="noopener noreferrer">TH-EY</a>.
                                 I work with javascript technologies, such as ReactJs and NextJs, but also have a solid background in Java,
-                                which I have utilized to develop API's and backend logic with Spring Boot.
+                                which I have utilized to develop APIs and backend logic with Spring Boot.
                             </p>
                             <p>
                                 I got started in my career in engineering while studying computing at Manchester Metropolitan University.
