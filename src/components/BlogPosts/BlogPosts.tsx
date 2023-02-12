@@ -8,7 +8,15 @@ const BlogPosts = ({ posts }: { posts: BlogPost[] }) => {
         <div className={styles.blogPostsGrid}>
             {posts.map(post => (
                 <Link href={`/blog/${post.slug}`} className={styles.blogPost} key={post.slug}>
-                    <Image src={post.data.imageUrl} alt="Blog post title" className={styles.blogPostImage} width={500} height={190} />
+                    <Image
+                        src={post.data.imageUrl}
+                        alt="Blog post title"
+                        placeholder="blur"
+                        blurDataURL="/images/landscape.jpg"
+                        className={styles.blogPostImage}
+                        width={500}
+                        height={190}
+                    />
                     <div className={styles.blogPostInfo}>
                         <p>{post.data.publishedAt}</p>
                         <p>{post.readingTime} min. read</p>

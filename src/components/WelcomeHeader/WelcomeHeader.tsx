@@ -5,7 +5,7 @@ import styles from './WelcomeHeader.module.css';
 const WelcomeHeader = () => {
     return (
         <header className={styles.welcomeContainer}>
-            <Image src={DawidAbramImage} alt="Dawid Abram" className={styles.image} />
+            <Image src={DawidAbramImage} placeholder="blur" blurDataURL="/dawidabram.jpg" alt="Dawid Abram" className={styles.image} />
             <h1>
                 Hi I’m Dawid! 👋<br/>
                 A full stack website developer specialising in javascript applications.<br/>

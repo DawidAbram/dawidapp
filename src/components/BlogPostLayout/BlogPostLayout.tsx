@@ -38,7 +38,14 @@ const BlogPostLayout = ({
                         <p>{keywords}</p>
                     </div>
                 </div>
-                {!!imageUrl ? <Image src={imageUrl} alt={title} className={styles.postImage} /> : null}
+                {!!imageUrl ?
+                    <Image
+                        src={imageUrl}
+                        placeholder="blur"
+                        blurDataURL="/images/landscape.jpg"
+                        alt={title}
+                        className={styles.postImage}
+                    /> : null}
                 <div className={styles.blogContent}>{children}</div>
             </main>
         </>
