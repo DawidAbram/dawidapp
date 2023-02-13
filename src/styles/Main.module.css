@@ -58,6 +58,12 @@
     margin-bottom: 4rem;
 }
 
+.blogContent {
+    width: 768px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 .blogContent img {
     max-width: 100%;
     object-fit: cover;

@@ -55,6 +55,14 @@ main {
     padding-bottom: 8rem;
 }
 
+.highlight {
+    background: #212836;
+    border-radius: 4px;
+    padding: 2px 6px;
+    color: orange;
+    margin: auto 3px;
+}
+
 :root {
     --background: #FFFFFF;
     --foreground: #000000;
