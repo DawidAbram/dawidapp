@@ -104,6 +104,24 @@ a.headingActive {
     margin: 1.5rem 0;
 }
 
+.shareOnTwitter {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #0091f3;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    margin-top: 4rem;
+}
+
+.shareOnTwitter:hover {
+    text-decoration: underline;
+}
+
+.shareOnTwitter span {
+    margin-left: 0.75rem;
+}
+
 .hideMobile {
     display: none;
 }
@@ -126,6 +144,11 @@ a.headingActive {
     .container {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .shareContainer {
+        display: flex;
+        justify-content: flex-end;
     }
 
     .postImage {

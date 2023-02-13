@@ -4,14 +4,20 @@ import {ReactElement} from "react";
 import Head from "next/head";
 import Image from "next/image";
 import {useHeadsObserver} from "@/hooks/useHeadsObserver";
+import {useRouter} from "next/router";
+import * as process from "process";
+import {StaticImageData} from "next/dist/client/image";
+import Link from "next/link";
+import {TwitterLogo} from "phosphor-react";
 
 interface Props {
     title: string;
     description?: string;
     publishedAt: string;
     keywords?: string;
-    imageUrl?: string;
+    imageUrl?: StaticImageData;
     hideTableOfContents?: boolean;
+    hideShareButton?: boolean;
     children: ReactElement;
 }
 
@@ -22,10 +28,12 @@ const BlogPostLayout = ({
                             keywords = "blog, Dawid Abram, reactjs, nextjs, typescript, tutorial",
                             imageUrl,
                             hideTableOfContents = false,
+                            hideShareButton = false,
                             children
 }: Props) => {
     const contentString = renderToString(children);
     const { activeId } = useHeadsObserver();
+    const { pathname } = useRouter();
 
     const getHeadings = (source: string) => {
         const regex = /<h[2-3]>(.*?)<\/h[2-3]>/g;
@@ -54,6 +62,19 @@ const BlogPostLayout = ({
                 <meta name='keywords' content={keywords} />
                 <meta name="description" content={description} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="image" content={`${process.env.NEXT_PUBLIC_URL}${imageUrl?.src}`} />
+                <meta name="creator" content="DawidAbram" />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={`${process.env.NEXT_PUBLIC_URL}${pathname}`} />
+                <meta property="og:image" content={`${process.env.NEXT_PUBLIC_URL}${imageUrl?.src}`} />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_URL}${imageUrl?.src}`} />
+                <meta name="twitter:url" content={`${process.env.NEXT_PUBLIC_URL}${pathname}`} />
+                <meta name="twitter:creator" content="@dawid_abram" />
+                <meta name="twitter:card" content="summary_large_image" />
                 <link rel="icon" href="/logo.svg" />
             </Head>
             <main className={styles.container}>
@@ -87,7 +108,23 @@ const BlogPostLayout = ({
                             </div>
                         </aside>
                     ) : null}
-                    <div className={styles.blogContent}>{children}</div>
+                    <div className={styles.blogContent}>
+                        {children}
+                        {!hideShareButton ?
+                            <div className={styles.shareContainer}>
+                                <Link
+                                    href={`https://twitter.com/intent/tweet/?text=${title}&via=dawid_abram&url=${process.env.NEXT_PUBLIC_URL}${pathname}`}
+                                    className={styles.shareOnTwitter}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <TwitterLogo weight="fill" size={20} />
+                                    <span>Share on Twitter</span>
+                                </Link>
+                            </div>
+                            : null
+                        }
+                    </div>
                 </div>
             </main>
         </>
