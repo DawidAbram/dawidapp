@@ -6,23 +6,28 @@
 .h2 {
     font-size: 36px;
     font-weight: 600;
-    padding: 3rem 0 1rem;
+    padding-top: 4rem;
 }
 
 .h3 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
-    padding: 2rem 0 1rem;
+    padding-top: 4rem;
 }
 
 .text {
     font-size: 18px;
-    line-height: 28px;
-    padding: 1rem 0;
+    line-height: 32px;
+    padding-top: 1.5rem;
 }
 
 .a {
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px solid var(--foreground);
+}
+
+.a:hover {
+    border-bottom: 2px solid var(--foreground);
 }
 
 .ol {

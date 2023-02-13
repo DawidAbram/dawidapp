@@ -58,16 +58,50 @@
     margin-bottom: 4rem;
 }
 
+.blogContentContainer {
+    display: block;
+}
+
+.blogAside {
+    display: none;
+}
+
+.blogTableOfContents h2 {
+    padding-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--lineBreak);
+    margin-bottom: 1rem;
+}
+
+.blogTableOfContents a {
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 13px;
+    border-radius: 4px;
+    transition: all ease-in-out 250ms;
+}
+
+.blogTableOfContents a:hover {
+    background: var(--lineBreak);
+    padding: 0.5rem;
+}
+
+a.headingActive {
+    background: var(--lineBreak);
+    padding: 0.5rem;
+}
+
 .blogContent {
-    width: 768px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 768px;
     margin: 0 auto;
 }
 
 .blogContent img {
     max-width: 100%;
     object-fit: cover;
-    margin: 1.25rem 0;
+    margin: 1.5rem 0;
 }
 
 .hideMobile {
@@ -97,5 +131,23 @@
     .postImage {
         height: 50vh;
         margin-bottom: 6rem;
+    }
+
+    .blogAside {
+        display: block;
+    }
+
+    .blogContentContainer {
+        display: grid;
+        grid-template-columns: 256px minmax(0, 1fr);
+    }
+
+    .blogTableOfContents {
+        position: sticky;
+        top: 3rem;
+        display: block;
+        padding-right: 2rem;
+        margin: 2rem auto 0;
+        width: 256px;
     }
 }
