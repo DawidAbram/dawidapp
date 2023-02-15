@@ -6,11 +6,9 @@ const WelcomeHeader = () => {
     return (
         <header className={styles.welcomeContainer}>
             <Image
+                priority
                 src={DawidAbramImage}
                 placeholder="blur"
-                blurDataURL="/dawidabram.webp"
-                width={124}
-                height={124}
                 alt="Dawid Abram"
                 className={styles.image}
             />

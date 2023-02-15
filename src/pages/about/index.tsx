@@ -18,7 +18,7 @@ export default function About() {
                 <h1 className={globalStyles.mainTitle}>About</h1>
                 <section className={styles.aboutMeSection}>
                     <header className={styles.imageContainer}>
-                        <Image src={DawidAbramImage} alt="Dawid Abram" className={styles.image} />
+                        <Image src={DawidAbramImage} placeholder="blur" alt="Dawid Abram" className={styles.image} />
                         <div>
                             <p>
                                 Hi I’m Dawid! 👋
