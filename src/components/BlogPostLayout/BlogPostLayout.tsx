@@ -89,7 +89,9 @@ const BlogPostLayout = ({
                     <Image
                         src={imageUrl}
                         placeholder="blur"
-                        blurDataURL="/images/landscape.jpg"
+                        blurDataURL={imageUrl.blurDataURL}
+                        width={1024}
+                        height={521}
                         alt={title}
                         className={styles.postImage}
                     /> : null}

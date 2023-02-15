@@ -14,7 +14,7 @@ const ThemeToggler = () => {
 
     return (
         <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-            {theme === 'light' ? <Moon data-hide-on-theme="dark" size={24} /> : <SunDim data-hide-on-theme="light" size={24} />}
+            {theme === 'light' ? <Moon size={24} /> : <SunDim size={24} />}
         </button>
     );
 }

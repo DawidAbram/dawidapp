@@ -28,6 +28,7 @@
 .navigation ul li a {
     display: block;
     padding: 20px 0 18px 0;
+    height: 100%;
     margin-right: 20px;
     color: var(--foregroundDarker);
     transition: all ease-in-out 400ms;

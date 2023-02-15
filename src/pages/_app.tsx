@@ -9,6 +9,7 @@ import mdxComponentsStyles from "@/styles/MdxComponents.module.css";
 import {Heading2} from "@/components/MDX/Header2";
 import {Heading3} from "@/components/MDX/Header3";
 import {GoogleAnalytics} from "nextjs-google-analytics";
+import Image from "next/image";
 
 const components = {
     h1: (props: JSX.IntrinsicAttributes & ClassAttributes<HTMLHeadingElement> & HTMLAttributes<HTMLHeadingElement>) => <h1 {...props} className={mdxComponentsStyles.h1}/>,
@@ -17,7 +18,8 @@ const components = {
     p: (props: JSX.IntrinsicAttributes & ClassAttributes<HTMLParagraphElement> & HTMLAttributes<HTMLParagraphElement>) => <p {...props} className={mdxComponentsStyles.text}/>,
     a: (props: JSX.IntrinsicAttributes & ClassAttributes<HTMLAnchorElement> & AnchorHTMLAttributes<HTMLAnchorElement>) => <a {...props} className={mdxComponentsStyles.a}/>,
     ol: (props: JSX.IntrinsicAttributes & ClassAttributes<HTMLOListElement> & OlHTMLAttributes<HTMLOListElement>) => <ol {...props} className={mdxComponentsStyles.ol} />,
-    ul: (props: JSX.IntrinsicAttributes & ClassAttributes<HTMLUListElement> & HTMLAttributes<HTMLUListElement>) => <ul {...props} className={mdxComponentsStyles.ul} />
+    ul: (props: JSX.IntrinsicAttributes & ClassAttributes<HTMLUListElement> & HTMLAttributes<HTMLUListElement>) => <ul {...props} className={mdxComponentsStyles.ul} />,
+    img: (props: any) => <Image {...props} loading="lazy" fill />,
 };
 
 export default function App({Component, pageProps}: AppProps) {

@@ -1,11 +1,19 @@
 import Image from "next/image";
-import DawidAbramImage from '../../../public/dawidabram.jpg';
+import DawidAbramImage from '../../../public/dawidabram.webp';
 import styles from './WelcomeHeader.module.css';
 
 const WelcomeHeader = () => {
     return (
         <header className={styles.welcomeContainer}>
-            <Image src={DawidAbramImage} placeholder="blur" blurDataURL="/dawidabram.jpg" alt="Dawid Abram" className={styles.image} />
+            <Image
+                src={DawidAbramImage}
+                placeholder="blur"
+                blurDataURL="/dawidabram.webp"
+                width={124}
+                height={124}
+                alt="Dawid Abram"
+                className={styles.image}
+            />
             <h1>
                 Hi I’m Dawid! 👋<br/>
                 A full stack website developer specialising in javascript applications.<br/>

@@ -12,9 +12,9 @@ const BlogPosts = ({ posts }: { posts: BlogPost[] }) => {
                         src={post.data.imageUrl}
                         alt="Blog post title"
                         placeholder="blur"
-                        blurDataURL="/images/landscape.jpg"
+                        blurDataURL={post.data.imageUrl}
                         className={styles.blogPostImage}
-                        width={500}
+                        width={320}
                         height={190}
                     />
                     <div className={styles.blogPostInfo}>

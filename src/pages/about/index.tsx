@@ -2,7 +2,7 @@ import Head from 'next/head'
 import globalStyles from '@/styles/Main.module.css'
 import styles from './AboutPage.module.css'
 import Image from "next/image";
-import DawidAbramImage from "../../../public/dawidabram.jpg";
+import DawidAbramImage from "../../../public/dawidabram.webp";
 import Link from "next/link";
 
 export default function About() {
