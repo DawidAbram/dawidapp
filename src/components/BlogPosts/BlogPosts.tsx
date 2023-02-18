@@ -24,6 +24,13 @@ const BlogPosts = ({ posts }: { posts: BlogPost[] }) => {
             ? Buffer.from(str).toString('base64')
             : window.btoa(str);
 
+    const getShortTitle = (title: string, maxAmount = 55) => {
+        if (title.length > maxAmount) {
+            return title.substring(0, maxAmount) + '...';
+        }
+        return title;
+    };
+
     return (
         <div className={styles.blogPostsGrid}>
             {posts.map(post => (
@@ -43,7 +50,7 @@ const BlogPosts = ({ posts }: { posts: BlogPost[] }) => {
                         <p>{post.data.publishedAt}</p>
                         <p>{post.readingTime} min. read</p>
                     </div>
-                    <h3>{post.data.title}</h3>
+                    <h3>{getShortTitle(post.data.title)}</h3>
                 </Link>
             ))}
         </div>

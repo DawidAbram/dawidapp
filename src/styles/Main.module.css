@@ -127,6 +127,10 @@ a.headingActive {
     display: none;
 }
 
+.hideMobileTable {
+    display: none;
+}
+
 .hideDesktop {
     display: initial;
 }
@@ -134,6 +138,10 @@ a.headingActive {
 @media (min-width: 768px) {
     .hideMobile {
         display: initial;
+    }
+
+    .hideMobileTable {
+        display: table-cell;
     }
 
     .hideDesktop {
