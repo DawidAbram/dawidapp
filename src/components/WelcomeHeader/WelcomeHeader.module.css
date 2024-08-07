@@ -1,21 +1,21 @@
 .welcomeContainer {
   display: flex;
-  align-items: center;
   padding: 6rem 0;
+  flex-direction: column;
 }
 
 .image {
-  display: none;
   width: 124px;
   height: 124px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 8px;
   background-color: var(--foregroundDarker);
 }
 
 .welcomeContainer > div {
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 }
 
 .welcomeContainer h1,
@@ -34,14 +34,13 @@
 
 @media (min-width: 1024px) {
   .welcomeContainer {
+    flex-direction: row;
+    align-items: center;
     padding: 10rem 0;
-  }
-
-  .image {
-    display: block;
   }
 
   .welcomeContainer > div {
     padding: 1.25rem;
+    margin: 0;
   }
 }
