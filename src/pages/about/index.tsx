@@ -59,9 +59,16 @@ export default function About() {
                 through blog posts and videos. These cover subjects and
                 technologies that I have recently worked with, as well as my
                 findings and learnings. Additionally, I have been working on
-                small side projects in my spare time, such as prettyestimate,
-                and some open source projects which I publish on GitHub. With a
-                goal of helping others who may encounter similar challenges in
+                small side projects in my spare time, such as{" "}
+                <a
+                  href="https://prettyestimate.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  prettyestimate
+                </a>
+                , and some open source projects which I publish on GitHub. With
+                a goal of helping others who may encounter similar challenges in
                 their work.
               </p>
               <p>If you are interested in more information about me</p>
