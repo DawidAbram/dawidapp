@@ -36,9 +36,9 @@ export default function About() {
                 >
                   TH-EY
                 </a>
-                . I work with various technologies that meet the demands of the
-                projects. Primarily focusing on javascript based technologies,
-                such as ReactJS and NextJS.
+                . I work with a wide range of technologies that meet the demands
+                of the projects. Primarily focusing on javascript based
+                technologies, such as ReactJS and NextJS.
               </p>
               <p>
                 I got started in my career in engineering while studying
