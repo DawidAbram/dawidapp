@@ -251,7 +251,6 @@ export const getStaticProps = async (context: { params: { id: any; }; }) => {
 
     const pageId = dbPage.properties.content.rich_text[0].mention.page.id;
     const page = await getPage(pageId);
-    console.log({ page });
     const blocks = await getBlocks(pageId);
 
     return {

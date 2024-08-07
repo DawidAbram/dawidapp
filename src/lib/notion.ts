@@ -1,4 +1,5 @@
 import { Client } from "@notionhq/client";
+import {BlockObjectResponse, PartialBlockObjectResponse} from "@notionhq/client/build/src/api-endpoints";
 
 const notion = new Client({
     auth: process.env.NOTION_SECRET,
@@ -15,7 +16,7 @@ export const getPage = async (pageId: string) => {
     return await notion.pages.retrieve({ page_id: pageId });
 };
 
-export const getBlocks = async (blockId: string) => {
+export const getBlocks = async (blockId: string): Promise<Array<PartialBlockObjectResponse | BlockObjectResponse>> => {
     blockId = blockId.replaceAll("-", "");
 
     const { results } = await notion.blocks.children.list({
@@ -23,21 +24,19 @@ export const getBlocks = async (blockId: string) => {
         page_size: 100,
     });
 
-    // Fetches all child blocks recursively - be mindful of rate limits if you have large amounts of nested blocks
-    // See https://developers.notion.com/docs/working-with-page-content#reading-nested-blocks
     const childBlocks = results.map(async (block) => {
-        if (block.has_children) {
+        if ("has_children" in block && block.has_children) {
             const children = await getBlocks(block.id);
             return { ...block, children };
         }
         return block;
     });
 
-    return await Promise.all(childBlocks).then((blocks) => {
+    const response = await Promise.all(childBlocks).then((blocks) => {
         return blocks.reduce((acc, curr) => {
-            if (curr.type === "bulleted_list_item") {
-                if (acc[acc.length - 1]?.type === "bulleted_list") {
-                    acc[acc.length - 1][acc[acc.length - 1].type].children?.push(curr);
+            if ("type" in curr && curr.type === "bulleted_list_item") {
+                if ("type" in acc[acc.length - 1] && acc[acc.length - 1]['type'] === "bulleted_list") {
+                    acc[acc.length - 1][acc[acc.length - 1]['type']]['children']?.push(curr);
                 } else {
                     acc.push({
                         id: getRandomInt(10 ** 99, 10 ** 100).toString(),
@@ -61,6 +60,8 @@ export const getBlocks = async (blockId: string) => {
             return acc;
         }, []);
     });
+    console.log(response);
+    return response;
 };
 
 function getRandomInt(min: number, max: number) {
