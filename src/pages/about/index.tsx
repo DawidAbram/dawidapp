@@ -12,7 +12,7 @@ export default function About() {
         <title>Dawid Abram - About</title>
         <meta name="description" content="Dawid Abram - About" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/logo.svg" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <main className={globalStyles.container}>
         <h1 className={globalStyles.mainTitle}>About</h1>
