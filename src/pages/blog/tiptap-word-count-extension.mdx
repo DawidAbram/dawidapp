@@ -131,27 +131,27 @@ In order to use this extension, we need to add it to the configuration of our ed
 
 ```typescript
 const editor = useEditor({
-    extensions: [
-      WordCount.configure({
-        limit: maxWords,
-      }),
-    ],
-  });
+  extensions: [
+    WordCount.configure({
+      limit: maxWords,
+    }),
+  ],
+});
 ```
 
 It can even be used in conjunction with the CharacterCount extension, so that you can count and limit the number of characters and words in the editor:
 
 ```typescript
 const editor = useEditor({
-    extensions: [
-      CharacterCount.configure({
-        limit: maxChars,
-      }),
-      WordCount.configure({
-        limit: maxWords,
-      }),
-    ],
-  });
+  extensions: [
+    CharacterCount.configure({
+      limit: maxChars,
+    }),
+    WordCount.configure({
+      limit: maxWords,
+    }),
+  ],
+});
 ```
 
 And voila! You now have a rich text editor with a word count extension that can be used to limit the number of words in
