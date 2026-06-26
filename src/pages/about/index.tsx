@@ -21,9 +21,8 @@ export default function About() {
         <h1 className={globalStyles.mainTitle}>About</h1>
         <section className={styles.aboutMeSection}>
           <header className={styles.imageContainer}>
-            <Image
+            <img
               src={DawidAbramImage}
-              placeholder="blur"
               alt="Dawid Abram"
               className={styles.image}
             />
@@ -45,9 +44,9 @@ export default function About() {
               <p>
                 I work primarily with JavaScript and TypeScript, building and
                 scaling products with React, Next.js and Node.js. Over my career
-                I&apos;ve owned architecture, shipped production software and led
-                teams across a wide range of projects, from early-stage MVPs to
-                established platforms.
+                I&apos;ve owned architecture, shipped production software and
+                led teams across a wide range of projects, from early-stage MVPs
+                to established platforms.
               </p>
               <p>
                 I started in engineering while studying computing at Manchester
