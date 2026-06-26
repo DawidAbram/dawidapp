@@ -1,9 +1,7 @@
-import Head from "next/head";
 import globalStyles from "@/styles/Main.module.css";
-import styles from "./AboutPage.module.css";
-import Image from "next/image";
-import DawidAbramImage from "../../../public/dawidabram.webp";
+import Head from "next/head";
 import Link from "next/link";
+import styles from "./AboutPage.module.css";
 
 export default function About() {
   return (
@@ -22,7 +20,7 @@ export default function About() {
         <section className={styles.aboutMeSection}>
           <header className={styles.imageContainer}>
             <img
-              src={DawidAbramImage}
+              src="/dawidabram.webp"
               alt="Dawid Abram"
               className={styles.image}
             />

@@ -59,7 +59,6 @@ const components = {
       ClassAttributes<HTMLUListElement> &
       HTMLAttributes<HTMLUListElement>,
   ) => <ul {...props} className={mdxComponentsStyles.ul} />,
-  img: (props: any) => <Image {...props} loading="lazy" fill />,
 };
 
 export default function App({ Component, pageProps }: AppProps) {
