@@ -26,7 +26,7 @@ const Blog = ({ posts }: { posts: BlogPost[] }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className={styles.container}>
+      <main className={styles.wide}>
         <h1 className={styles.mainTitle}>Blog</h1>
         <BlogPosts posts={posts} />
       </main>

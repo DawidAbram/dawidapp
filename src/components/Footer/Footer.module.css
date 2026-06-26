@@ -1,25 +1,27 @@
 .footer {
     border-top: 1px solid var(--lineBreak);
-    padding: 1.25rem 0;
+    padding: 2rem 0;
     color: var(--foregroundDarker);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: 500;
 }
 
 .footer a:hover {
-    text-decoration: underline;
+    color: var(--foreground);
 }
 
-.sourceCodeLink {
-    display: block;
-    padding-top: 1rem;
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
     .footer {
-        display: flex;
+        flex-direction: row;
+        align-items: center;
         justify-content: space-between;
-    }
-
-    .sourceCodeLink {
-        padding-top: initial;
     }
 }

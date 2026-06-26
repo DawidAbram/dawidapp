@@ -1,13 +1,24 @@
 .container {
   width: 100%;
-  max-width: 860px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
+.wide {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: clamp(1.25rem, 5vw, 4rem);
+  padding-right: clamp(1.25rem, 5vw, 4rem);
+}
+
 .mainTitle {
-  padding: 4rem 0;
+  padding: 5rem 0 3rem;
+  font-size: clamp(2.75rem, 8vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
 }
 
 .errorContainer {
@@ -15,12 +26,14 @@
 }
 
 .postTitleContainer {
-  padding: 4rem 0;
+  padding: 4rem 0 3rem;
 }
 
 .postTitle {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
 }
 
 .underTitle {

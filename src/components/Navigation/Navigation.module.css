@@ -1,49 +1,96 @@
 .navigationContainer {
     border-bottom: 1px solid var(--lineBreak);
-}
-
-.logoContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.25rem 0;
-}
-
-.logo {
-    fill: var(--foreground);
-    width: 60px;
-    height: 61px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--navBg);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
 }
 
 .navigation {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
+    gap: 1.5rem;
+    height: 72px;
 }
 
-.navigation ul {
+.logoLink {
     display: flex;
+    align-items: center;
 }
 
-.navigation ul li a {
-    display: block;
-    padding: 20px 0 18px 0;
-    height: 100%;
-    margin-right: 20px;
+.logo {
+    fill: var(--foreground);
+    width: 44px;
+    height: 45px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navLinks li a {
+    position: relative;
+    font-weight: 600;
     color: var(--foregroundDarker);
-    transition: all ease-in-out 400ms;
-    border-bottom: 2px solid transparent;
+    transition: color ease-in-out 200ms;
 }
 
-.navigation ul li:last-child a {
-    margin-right: 0;
+.navLinks li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 0;
+    background: var(--foreground);
+    transition: width 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.navigation ul li a:hover {
+.navLinks li a:hover {
     color: var(--foreground);
-    border-bottom: 2px solid var(--foreground);
+}
+
+.navLinks li a:hover::after {
+    width: 100%;
 }
 
 .activeLink {
     color: var(--foreground) !important;
+}
+
+.activeLink::after {
+    width: 100%;
+}
+
+.logo {
+    transition: transform 0.3s ease;
+}
+
+.logoLink:hover .logo {
+    transform: rotate(-8deg) scale(1.05);
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.workBtn {
+    background: var(--foreground);
+    color: var(--background);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: 6px;
+    transition: opacity 200ms ease;
+}
+
+.workBtn:hover {
+    opacity: 0.85;
 }

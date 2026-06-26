@@ -1,18 +1,36 @@
 .latestPosts {
-    padding-bottom: 4rem;
+    padding: 5rem 0;
 }
 
 .latestPostsTop {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--lineBreak);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.latestPostsTop h2 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--foregroundDarker);
 }
 
 .viewAllBtn {
-    background-color: var(--lineBreak);
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--foregroundDarker);
+    transition: color 200ms ease;
+}
+
+.viewAllBtn:hover {
+    color: var(--foreground);
+}
+
+@media (min-width: 768px) {
+    .latestPosts {
+        padding: 6rem 0;
+    }
 }

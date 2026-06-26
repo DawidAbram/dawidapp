@@ -15,7 +15,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family:
-    "Public Sans",
+    "Bricolage Grotesque",
     ui-sans-serif,
     system-ui,
     -apple-system,
@@ -30,11 +30,14 @@ body {
     "Segoe UI Emoji",
     "Segoe UI Symbol",
     "Noto Color Emoji";
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
 }
 
 main {
   min-height: calc(100vh - 225px);
+  padding-bottom: 8rem;
 }
 
 a {
@@ -55,7 +58,12 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
 p {
   font-weight: 400;
 }
@@ -65,6 +73,7 @@ button {
   background: transparent;
   border: none;
   outline: none;
+  font-family: inherit;
 }
 
 pre {
@@ -72,6 +81,7 @@ pre {
   padding: 1.25rem;
   border-radius: 8px;
   margin-top: 1.5rem;
+  font-size: 14px;
 }
 
 table {
@@ -121,34 +131,32 @@ table tbody tr:last-child td:last-child {
   border-bottom-right-radius: 4px;
 }
 
-main {
-  padding-bottom: 8rem;
-}
-
 .highlight {
-  background: #212836;
+  background: var(--codeInline);
   border-radius: 4px;
   padding: 2px 6px;
-  color: orange;
+  color: var(--codeInlineText);
   margin: auto 3px;
 }
 
 :root {
   --background: #ffffff;
-  --foreground: #000000;
-  --foregroundDarker: #646464;
-  --lineBreak: #ececec;
+  --foreground: #0a0a0a;
+  --foregroundDarker: #6b6b6b;
+  --lineBreak: #e6e6e6;
+  --surface: #f7f7f7;
+  --navBg: rgba(255, 255, 255, 0.72);
+  --codeInline: #f0f0f0;
+  --codeInlineText: #b5530a;
 }
 
 [data-theme="dark"] {
-  --background: #0f1012;
-  --foreground: white;
-  --foregroundDarker: #888e9b;
-  --lineBreak: #292929;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --foregroundDarker: #9a9a9a;
+  --lineBreak: #262626;
+  --surface: #161616;
+  --navBg: rgba(10, 10, 10, 0.72);
+  --codeInline: #1f2330;
+  --codeInlineText: orange;
 }

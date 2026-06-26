@@ -1,0 +1,225 @@
+.hero {
+  padding: 5rem 0 4rem;
+  max-width: 720px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--foregroundDarker);
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: clamp(3rem, 9vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  margin-bottom: 1.75rem;
+}
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2.4s ease-in-out infinite;
+}
+
+.lead {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.5;
+  color: var(--foregroundDarker);
+  margin-bottom: 3rem;
+}
+
+.lead em {
+  font-style: italic;
+  color: var(--foreground);
+}
+
+/* ---- Email card ---- */
+.card {
+  border: 1px solid var(--lineBreak);
+  border-radius: 24px;
+  padding: 2.25rem;
+  background: var(--surface);
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 350ms ease,
+    box-shadow 350ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--foreground);
+  box-shadow: 0 24px 60px -32px rgba(0, 0, 0, 0.3);
+}
+
+.cardLabel {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--foregroundDarker);
+  margin-bottom: 0.75rem;
+}
+
+.email {
+  display: inline-block;
+  font-size: clamp(1.35rem, 4vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  word-break: break-all;
+  background-image: linear-gradient(var(--foreground), var(--foreground));
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.email:hover {
+  background-size: 100% 2px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--foreground);
+  color: var(--background);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  transition:
+    transform 200ms ease,
+    opacity 200ms ease;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btnPrimary:hover .arrow {
+  transform: translateX(4px);
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--lineBreak);
+  color: var(--foreground);
+  background: var(--background);
+  transition:
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.btnSecondary:hover {
+  border-color: var(--foreground);
+  transform: translateY(-2px);
+}
+
+.subjectRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--lineBreak);
+  font-size: 0.95rem;
+}
+
+.subjectLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--foregroundDarker);
+}
+
+.subject {
+  font-weight: 600;
+}
+
+.shuffle {
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0.35rem;
+  border-radius: 8px;
+  transition:
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    background 200ms ease;
+}
+
+.shuffle:hover {
+  background: var(--lineBreak);
+  transform: rotate(180deg);
+}
+
+/* ---- Footnote ---- */
+.footnote {
+  padding: 2rem 0 6rem;
+  font-size: 1.05rem;
+  color: var(--foregroundDarker);
+}
+
+.footnote a {
+  font-weight: 700;
+  color: var(--foreground);
+  border-bottom: 1px solid var(--foregroundDarker);
+  transition: border-color 200ms ease;
+}
+
+.footnote a:hover {
+  border-color: var(--foreground);
+}
+
+@keyframes wave {
+  0%,
+  60%,
+  100% {
+    transform: rotate(0deg);
+  }
+  10%,
+  30% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave {
+    animation: none;
+  }
+}
+

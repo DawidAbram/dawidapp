@@ -26,7 +26,7 @@ export default function App({Component, pageProps}: AppProps) {
     return (
         <MDXProvider components={components}>
             <GoogleAnalytics trackPageViews />
-            <ThemeProvider>
+            <ThemeProvider defaultTheme="light" enableSystem={false}>
                 <Navigation />
                 <Component {...pageProps} />
                 <Footer />

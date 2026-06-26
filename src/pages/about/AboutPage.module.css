@@ -1,6 +1,7 @@
 .aboutMeSection {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 19px;
+    line-height: 32px;
+    padding-bottom: 4rem;
 }
 
 .aboutMeSection a {
@@ -18,7 +19,8 @@
 .imageContainer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    grid-gap: 2.5rem;
+    align-items: start;
 }
 
 .image {
@@ -26,27 +28,58 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 16px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.buttonPrimary {
+    display: inline-block;
+    background: var(--foreground);
+    color: var(--background);
+    font-weight: 700;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    transition: opacity 200ms ease;
+}
+
+.buttonPrimary:hover {
+    opacity: 0.85;
+    text-decoration: none;
 }
 
 .button {
     display: inline-block;
-    background-color: var(--lineBreak);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    margin: 0.25rem 0;
+    font-weight: 700;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--lineBreak);
+    transition: border-color 200ms ease;
+}
+
+.button:hover {
+    border-color: var(--foreground);
+    text-decoration: none;
 }
 
 @media (min-width: 768px) {
     .imageContainer {
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 360px minmax(0, 620px);
+        justify-content: start;
+        grid-gap: 4rem;
     }
 
     .image {
-        display: inline-block;
-        width: 300px;
-        height: 300px;
+        position: sticky;
+        top: 7rem;
+        width: 360px;
+        height: 440px;
         object-fit: cover;
-        border-radius: 8px;
+        border-radius: 16px;
     }
 }

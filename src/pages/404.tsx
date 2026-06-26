@@ -10,7 +10,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/logo.svg" />
             </Head>
-            <main className={styles.container}>
+            <main className={styles.wide}>
                 <div className={styles.errorContainer}>
                     <h1>404</h1>
                     <p>Oops! Page not found</p>

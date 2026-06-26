@@ -7,8 +7,8 @@ const LatestPosts = ({ posts }: { posts: BlogPost[] }) => {
     return (
         <section className={styles.latestPosts}>
             <div className={styles.latestPostsTop}>
-                <h2>Latest posts</h2>
-                <Link href="/blog" className={styles.viewAllBtn}>View all</Link>
+                <h2>Writing</h2>
+                <Link href="/blog" className={styles.viewAllBtn}>View all →</Link>
             </div>
             <BlogPosts posts={posts.slice(0, 6)} />
         </section>

@@ -1,0 +1,355 @@
+/* ---------- Section rhythm ---------- */
+.section {
+  padding: 5rem 0;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.sectionLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--foregroundDarker);
+}
+
+.sectionLink {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--foregroundDarker);
+  transition: color 200ms ease;
+}
+
+.sectionLink:hover {
+  color: var(--foreground);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 4.5rem 0 5.5rem;
+}
+
+.heroMain > * {
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.heroTitle {
+  font-size: clamp(2.75rem, 7vw, 5.75rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  margin-bottom: 1.75rem;
+  animation-delay: 0.12s;
+}
+
+.heroLead {
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  line-height: 1.5;
+  max-width: 560px;
+  color: var(--foregroundDarker);
+  margin-bottom: 2.5rem;
+  animation-delay: 0.2s;
+}
+
+.heroLead strong {
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  animation-delay: 0.28s;
+}
+
+/* Hero info card */
+.heroCard {
+  border: 1px solid var(--lineBreak);
+  border-radius: 20px;
+  padding: 0.5rem 1.75rem;
+  background: var(--surface);
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: 0.35s;
+}
+
+.cardRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--lineBreak);
+}
+
+.cardRow:first-child {
+  border-top: none;
+}
+
+.cardLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--foregroundDarker);
+}
+
+.cardValue {
+  font-weight: 700;
+  text-align: right;
+}
+
+.cardValue a {
+  border-bottom: 1px solid var(--foregroundDarker);
+  transition: border-color 200ms ease;
+}
+
+.cardValue a:hover {
+  border-color: var(--foreground);
+}
+
+/* ---------- Buttons ---------- */
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--foreground);
+  color: var(--background);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 8px;
+  transition:
+    transform 200ms ease,
+    opacity 200ms ease;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btnPrimary .arrow {
+  transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btnPrimary:hover .arrow {
+  transform: translateX(4px);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--lineBreak);
+  transition:
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.btnSecondary:hover {
+  border-color: var(--foreground);
+  transform: translateY(-2px);
+}
+
+/* ---------- Services ---------- */
+.services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.service {
+  border: 1px solid var(--lineBreak);
+  border-radius: 20px;
+  padding: 2rem;
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 350ms ease,
+    box-shadow 350ms ease;
+}
+
+.service:hover {
+  transform: translateY(-6px);
+  border-color: var(--foreground);
+  box-shadow: 0 18px 40px -24px rgba(0, 0, 0, 0.25);
+}
+
+.serviceNum {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--foregroundDarker);
+  margin-bottom: 2.5rem;
+}
+
+.service h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.service p {
+  color: var(--foregroundDarker);
+  line-height: 1.55;
+}
+
+/* ---------- Selected work ---------- */
+.workList {
+  display: flex;
+  flex-direction: column;
+}
+
+.workItem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--lineBreak);
+  transition: padding-left 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.workItem:first-child {
+  border-top: none;
+}
+
+.workItem:hover {
+  padding-left: 0.85rem;
+}
+
+.workItem h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.workRole {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--foregroundDarker);
+  font-weight: 500;
+}
+
+.workArrow {
+  display: inline-block;
+  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.workItem:hover .workArrow {
+  transform: translate(4px, -4px);
+}
+
+/* ---------- Expertise ---------- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tag {
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--lineBreak);
+  border-radius: 100px;
+  transition:
+    background 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+.tag:hover {
+  background: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
+}
+
+/* ---------- CTA band ---------- */
+.ctaBand {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid var(--lineBreak);
+  border-radius: 28px;
+  padding: 6rem 2rem;
+  margin: 4rem 0;
+  background:
+    radial-gradient(
+      120% 120% at 50% 0%,
+      var(--surface) 0%,
+      var(--background) 70%
+    );
+}
+
+.ctaBand h2 {
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  margin-bottom: 0.75rem;
+}
+
+.ctaBand p {
+  color: var(--foregroundDarker);
+  font-size: 1.15rem;
+  margin-bottom: 2.25rem;
+}
+
+.ctaBand .ctaRow {
+  justify-content: center;
+  animation: none;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroMain > *,
+  .heroCard {
+    animation: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 6rem 0;
+  }
+
+  .services {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 980px) {
+  .hero {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4.5rem;
+    padding: 6.5rem 0 7.5rem;
+  }
+}

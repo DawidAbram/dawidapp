@@ -10,11 +10,14 @@ export default function About() {
     <>
       <Head>
         <title>Dawid Abram - About</title>
-        <meta name="description" content="Dawid Abram - About" />
+        <meta
+          name="description"
+          content="Dawid Abram - Lead engineer, fractional CTO and technical advisor for startups and growing teams."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className={globalStyles.container}>
+      <main className={globalStyles.wide}>
         <h1 className={globalStyles.mainTitle}>About</h1>
         <section className={styles.aboutMeSection}>
           <header className={styles.imageContainer}>
@@ -25,10 +28,11 @@ export default function About() {
               className={styles.image}
             />
             <div>
-              <p>Hi I’m Dawid Abram! 👋</p>
               <p>
-                I&apos;m a lead developer based out of United Kingdom, currently
-                working at{" "}
+                I&apos;m Dawid Abram, a lead engineer based in the United
+                Kingdom. I help startups and growing teams as a fractional CTO,
+                technical advisor and hands-on developer, currently leading
+                engineering at{" "}
                 <a
                   href="https://th-ey.com"
                   target="_blank"
@@ -36,30 +40,19 @@ export default function About() {
                 >
                   TH-EY
                 </a>
-                . I work with a wide range of technologies that meet the demands
-                of the projects. Primarily focusing on javascript based
-                technologies, such as ReactJS and NextJS.
-              </p>
-              <p>
-                I got started in my career in engineering while studying
-                computing at Manchester Metropolitan University. Since then, I
-                have continued to grow my skill set as a consultant, working in
-                various projects, some of which you can find on{" "}
-                <a
-                  href="https://th-ey.com/portfolio/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  here
-                </a>
                 .
               </p>
               <p>
-                Recently I also began sharing my experiences and knowledge
-                through blog posts and videos. These cover subjects and
-                technologies that I have recently worked with, as well as my
-                findings and learnings. Additionally, I have been working on
-                small side projects in my spare time, such as{" "}
+                I work primarily with JavaScript and TypeScript, building and
+                scaling products with React, Next.js and Node.js. Over my career
+                I&apos;ve owned architecture, shipped production software and led
+                teams across a wide range of projects, from early-stage MVPs to
+                established platforms.
+              </p>
+              <p>
+                I started in engineering while studying computing at Manchester
+                Metropolitan University, and have grown my skill set as a
+                consultant ever since. I also build my own products, such as{" "}
                 <a
                   href="https://prettyestimate.com/"
                   target="_blank"
@@ -67,19 +60,28 @@ export default function About() {
                 >
                   prettyestimate
                 </a>
-                , and some open source projects which I publish on GitHub. With
-                a goal of helping others who may encounter similar challenges in
-                their work.
+                , and contribute to open source on GitHub.
               </p>
-              <p>If you are interested in more information about me</p>
-              <Link
-                href="/Dawid-Abram_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.button}
-              >
-                Check out my CV
-              </Link>
+              <p>
+                I write about the technologies I work with and the lessons I
+                pick up along the way, with a goal of helping other builders
+                solve similar problems. If you&apos;re looking for technical
+                leadership or a senior engineer to help ship your product,
+                let&apos;s talk.
+              </p>
+              <div className={styles.actions}>
+                <Link href="/contact" className={styles.buttonPrimary}>
+                  Work with me
+                </Link>
+                <Link
+                  href="/Dawid-Abram_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.button}
+                >
+                  Check out my CV
+                </Link>
+              </div>
             </div>
           </header>
         </section>
