@@ -1,21 +1,19 @@
-import styles from "@/styles/Main.module.css";
-import { renderToString } from "react-dom/server";
-import { ReactElement } from "react";
-import Head from "next/head";
-import Image from "next/image";
 import { useHeadsObserver } from "@/hooks/useHeadsObserver";
-import { useRouter } from "next/router";
-import * as process from "process";
-import { StaticImageData } from "next/dist/client/image";
+import styles from "@/styles/Main.module.css";
+import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { TwitterLogo } from "phosphor-react";
+import * as process from "process";
+import { ReactElement } from "react";
+import { renderToString } from "react-dom/server";
 
 interface Props {
   title: string;
   description?: string;
   publishedAt: string;
   keywords?: string;
-  imageUrl?: StaticImageData;
+  imageUrl?: string;
   hideTableOfContents?: boolean;
   hideShareButton?: boolean;
   children: ReactElement;
@@ -66,7 +64,7 @@ const BlogPostLayout = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="image"
-          content={`${process.env.NEXT_PUBLIC_URL}${imageUrl?.src}`}
+          content={`${process.env.NEXT_PUBLIC_URL}${imageUrl}`}
         />
         <meta name="creator" content="DawidAbram" />
         <meta property="og:title" content={title} />
@@ -78,13 +76,13 @@ const BlogPostLayout = ({
         />
         <meta
           property="og:image"
-          content={`${process.env.NEXT_PUBLIC_URL}${imageUrl?.src}`}
+          content={`${process.env.NEXT_PUBLIC_URL}${imageUrl}`}
         />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content={`${process.env.NEXT_PUBLIC_URL}${imageUrl?.src}`}
+          content={`${process.env.NEXT_PUBLIC_URL}${imageUrl}`}
         />
         <meta
           name="twitter:url"
@@ -104,7 +102,7 @@ const BlogPostLayout = ({
         </div>
         {!!imageUrl ? (
           <img
-            src={imageUrl?.src}
+            src={imageUrl}
             width={1024}
             height={521}
             alt={title}
